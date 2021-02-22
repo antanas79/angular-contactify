@@ -26,14 +26,37 @@ export class ContactsComponent implements OnInit {
       this.selected = value;
     } else {
       this.selected = 0;
-      this.contacts = this.contactsService
-        .getContacts()
-        .filter(
-          (c) =>
-            c.active == value.showActive &&
-            c.city.includes(value.selectedPropertyValue) &&
-            c.name.includes(value.searchValue)
-        );
+
+      if (value.selectedPropertyValue?.length > 0) {
+        this.contacts = this.contactsService
+          .getContacts()
+          .filter(
+            (c) =>
+              c.active == value.showActive &&
+              c.city == value.selectedPropertyValue &&
+              c.name
+                .toLowerCase()
+                .includes(
+                  value.searchValue
+                    ? value.searchValue.toLowerCase()
+                    : value.searchValue
+                )
+          );
+      } else {
+        this.contacts = this.contactsService
+          .getContacts()
+          .filter(
+            (c) =>
+              c.active == value.showActive &&
+              c.name
+                .toLowerCase()
+                .includes(
+                  value.searchValue
+                    ? value.searchValue.toLowerCase()
+                    : value.searchValue
+                )
+          );
+      }
     }
   }
 }
