@@ -16,13 +16,12 @@ export class TableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.rows)
-    console.log(this.columnNames)
     for (let i = 0; i < this.columnNames.length; i++ ) {
       this.showSort[this.columnNames[i]] = false;
       this.descending[this.columnNames[i]] = false;
     }
   }
+  
   select(i) {
     this.selected = i;
     this.onTableSelectedRowChange.emit(this.selected);
