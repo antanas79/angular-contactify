@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AnchorTagComponent } from './anchor-tag.component';
 
@@ -6,7 +6,7 @@ describe('AnchorTagComponent', () => {
   let component: AnchorTagComponent;
   let fixture: ComponentFixture<AnchorTagComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ AnchorTagComponent ]
     })
