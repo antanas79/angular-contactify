@@ -34,7 +34,6 @@ export class ContactsComponent implements OnInit {
             c.city.includes(value.selectedPropertyValue) &&
             c.name.includes(value.searchValue)
         );
-      console.log(this.contacts);
     }
   }
 }
