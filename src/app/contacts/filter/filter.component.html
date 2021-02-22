@@ -1,0 +1,23 @@
+<div class="d-flex align-items-center search justify-content-between filter">
+    <div class="d-flex justify-content-between col-12 p-0">
+        <form novalidate>
+            <div class="d-flex">
+                <div class="mr-3">
+                    <app-search-input (onSearchValueChanged)="updateFormValues($event, 'searchValue')" [placeholder]="'Name'" [hasSearchIcon]="false"></app-search-input>
+                </div>
+                <app-select (onSelectValueChanged)="updateFormValues($event, 'selectedPropertyValue')" [placeholder]="'City'" [options]="uniqueItems"></app-select>
+                <div class="mx-3 pl-2 pr-1 d-flex align-items-center">
+                    <app-checkbox (onCheckboxValueChanged)="updateFormValues($event, 'showActive')" [checkboxValue]="true" [checkboxName]="'showActive'" [checkboxId]="'checkboxId'" [checkboxLabelText]="'Show Active'"></app-checkbox>
+                </div>
+                <div class="mx-3 pl-2 pr-1" (click)="save()">
+                    <app-button class="filter" [buttonText]="'Filter'"></app-button>
+                </div>
+            
+            </div>
+        </form>
+
+        <div>
+            <app-button class="add-new-contract" [buttonText]="'Add New Contract'" [svgId]="'plus-circle-solid'"></app-button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+svg {
+    &.logo-icon,  &.dropdown, &.copyright {
+        width: 12px;
+        height: 12px;
+    }
+    &.action, &.eye, &.arrow   {
+        width: 15px;
+        height: 15px;
+    }
+    &.add-new-contract {
+        width: 25px;
+        height: 25px;
+    }
+}

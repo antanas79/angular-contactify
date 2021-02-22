@@ -1,0 +1,26 @@
+<div class="navbar-container container-fluid d-flex align-items-center">
+    <div class="icon-links-search d-flex justify-content-between align-items-center">
+        <div>
+            <div class="logo d-flex text-white mr-3">
+                CONTACT<span class="position-relative">I<app-svg class="position-absolute logo-icon" svgId="user-circle-solid"></app-svg></span>FY
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="links-container mr-3">
+                <app-links [links]="['Dashboard', 'Contacts', 'Notifications']"></app-links>
+            </div>
+            <app-search-input [placeholder]="'Search'" [hasSearchIcon]="true"></app-search-input>
+        </div>
+       
+    </div>
+    <div class="dropdown-container d-flex align-self-start justify-content-end">
+        <app-dropdown 
+            [mainChoice]="{'Name': 'Jorah Mormont', 'SvgId': 'user-solid'}" 
+            [dropdownOptions]="[
+            {'Name': 'Groups', 'SvgId': 'users-solid'},
+            {'Name': 'Frequently Contacted', 'SvgId': 'comments-solid'},
+            {'Name': 'Preferences', 'SvgId': 'wrench-solid'},
+            {'Name': 'Log Out', 'SvgId': 'power-off-solid'}]">
+        </app-dropdown>
+    </div>
+</div>

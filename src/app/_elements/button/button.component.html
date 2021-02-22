@@ -1,0 +1,10 @@
+<button class="text-uppercase" class={{class}}>
+    <app-svg 
+    *ngIf="svgId" 
+    class="{{class}}"
+    [svgId]="svgId">
+    </app-svg>
+    <span 
+    [ngClass]="{'ml-2': svgId}">
+        {{buttonText}}</span>
+</button>

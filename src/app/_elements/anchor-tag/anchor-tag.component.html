@@ -1,0 +1,8 @@
+<a *ngIf="link"
+routerLink="{{ link.Path | lowercase}}"
+[ngClass]="{'underlined': link.IsUnderlined}"
+class="{{class}}"
+routerLinkActive="active"
+>
+    {{link.Text}}
+</a>

@@ -1,0 +1,50 @@
+<div class="footer d-flex">
+    <div class="first d-flex flex-column pt-3">
+        <div class="d-flex flex-column">
+            <div class="mb-2" *ngFor="let link of [
+            {Path: '/dashboard', IsUnderlined: true, Text: 'Dashboard'}, 
+            {Path: '/contacts', IsUnderlined: true, Text: 'Contacts'}, 
+            {Path: '/notifications', IsUnderlined: true, Text: 'Notifications'}
+            ]">
+                <app-anchor-tag class="text-white" [link]="link"></app-anchor-tag>
+            </div>
+            <div class="py-3 mt-2 d-flex text-white">
+                <app-svg class="copyright" [svgId]="'copyright-regular'"></app-svg> 
+                <span class="ml-1">
+                    Contactify 
+                </span>
+            
+                <div class="d-flex">
+                    <div class="mx-1" *ngFor="let link of [
+                    {Path: '/About', IsUnderlined: true, Text: 'About'}, 
+                    {Path: '/Privacy', IsUnderlined: true, Text: 'Privacy'}
+                    ]">
+                        <app-anchor-tag class="text-white" [link]="link"></app-anchor-tag>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <div class="second  d-flex flex-column">
+        <div class="d-flex justify-content-between align-items-center py-3">
+            <app-icon-text [svgId]="'could-upload-alt-solid'" [texts]="['Last Synced', '2015-06-02 14:33:10']" [class]="'bigger'"></app-icon-text>
+            <app-icon-text [svgId]="'sync-solid'" [texts]="['Force Sync']" [class]="'smaller'"></app-icon-text>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-3">
+            <app-icon-text  [svgId]="'stethoscope-solid'" [texts]="['Help desk and Resolution center available:', 
+            'I- IV 8:00-18:00, V 8:00-16:45']" [class]="'bigger'"></app-icon-text>
+        </div>
+      
+    </div>
+    <div class="third pt-3">
+        <div class="mb-2" *ngFor="let link of [
+        {Path: '/groups', IsUnderlined: true, Text: 'Groups'}, 
+        {Path: '/faq', IsUnderlined: true, Text: 'Frequently contacted'}, 
+        {Path: '/preferences', IsUnderlined: true, Text: 'Preferences'},
+        {Path: '/logout', IsUnderlined: true, Text: 'Log Out'}
+        ]">
+            <app-anchor-tag class="text-white" [link]="link"></app-anchor-tag>
+        </div>
+    </div>
+</div>

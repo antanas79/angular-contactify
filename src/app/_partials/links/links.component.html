@@ -1,0 +1,12 @@
+<div class="buttons-container d-flex align-items-center">
+    <button type="button" 
+    class="btn p-0" 
+    *ngFor="let link of links, let i = index" 
+    routerLink="{{ link | lowercase}}"
+    [ngClass]="{'first' : i == 0, 'last': i == links.length - 1}"
+    routerLinkActive="active">
+    {{link}}
+    </button>
+</div>
+
+

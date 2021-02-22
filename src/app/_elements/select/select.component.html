@@ -1,0 +1,6 @@
+<form [formGroup]="form" novalidate>
+    <select class="form-select py-0" name="selectValue" formControlName="selectValue" >
+        <option selected value="">{{placeholder}}</option>
+        <option *ngFor="let option of options" [value]="option">{{option}}</option>
+    </select>
+</form>

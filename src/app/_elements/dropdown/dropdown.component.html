@@ -1,0 +1,19 @@
+<div ngbDropdown >
+    <div class="arrow-up"></div>
+    <span class="btn d-flex align-items-center" id="userMenu" ngbDropdownToggle>
+        <span class="username">
+            <app-svg [svgId]="mainChoice.SvgId" [class]="'dropdown'"></app-svg>
+            {{ mainChoice.Name }}
+        </span>
+    </span>
+    <div aria-labelledby="userMenu" ngbDropdownMenu class="dropdown-menu-right py-0">
+        <a *ngFor="let option of dropdownOptions, let i = index" routerLink="/{{option}}" class="dropdown-item d-flex align-items-center">
+            <app-svg [svgId]="option.SvgId" [class]="'dropdown'"></app-svg>
+            <span class="ml-2">
+                {{option.Name}}
+            </span>
+           
+        </a>
+    </div>
+</div>
+

@@ -1,0 +1,6 @@
+<form [formGroup]="form" novalidate>
+    <div class="checkbox d-flex align-items-center">
+        <input type="checkbox" id="{{checkboxId}}" name="checkboxValue" formControlName="checkboxValue" [value]="checkboxValue" />
+        <label class="mb-0 ml-1" for="{{checkboxId}}" [title]="checkboxLabelText">{{checkboxLabelText}}</label>
+    </div>
+</form>

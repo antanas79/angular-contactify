@@ -1,0 +1,39 @@
+
+
+.card-container {
+    // min-height: 401px;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+    padding: 14px 12px 19px 12px;
+
+    img {
+        height: 194px;
+        width: 194px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        border: 4px solid rgb(216,216,207)
+    }
+
+    .property {
+        width: 75px;
+        padding-right: 15px;
+        color: rgb(97,96,98);    
+    }
+    .property, .property-values {
+        font-size: 0.85rem;
+        div {
+            padding-bottom: 15px;
+        }
+    }
+
+    .property-values {
+        width: calc(198px - 75px);
+        div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+     
+    }
+}

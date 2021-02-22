@@ -1,0 +1,25 @@
+
+.navbar-container {
+    height: 89px;
+    background: rgb(27,60,66);
+    .logo {
+        font-size: 2rem;
+        app-svg {
+            top: -3px;
+            left: -2px;
+        }
+    }
+    .icon-links-search {
+        width: calc(100% - 242px);
+    }
+    .dropdown-container {
+        width: 242px;
+    }
+    app-dropdown {
+        svg {
+            width:11px;
+            height: 11px;
+        }
+    }
+}
+

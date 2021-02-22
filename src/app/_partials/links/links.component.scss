@@ -1,0 +1,26 @@
+div.buttons-container {
+    background-color: rgb(13, 160, 183);
+    border-radius: 15px;
+    height: 35px;
+
+    button {
+        width: 148px;
+        color: white;
+        border-radius: 0;
+    }
+
+    button:hover {
+        opacity: 0.7;
+    }
+
+    .first, .last {
+        width: 161px;
+    }
+    
+    .active {
+        margin-top: 1px;
+        margin-bottom: 1px;
+        height: 33px;
+        background-color: rgb(24, 133, 144);
+    }
+}

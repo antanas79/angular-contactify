@@ -1,0 +1,24 @@
+button {
+    width: 222px;
+    color: white;
+    border-radius: 15px;
+    height: 35px;
+
+    &.add-new-contract {
+        app-svg {
+            width: 25px;
+            height: 25px;
+        }
+        background: rgb(32,127,122);
+    }
+
+    &.filter{
+        background: transparent;
+        width: 106px;
+        border: 2px solid rgb(92,147, 150);
+    }
+}
+button:hover {
+    opacity: 0.7;
+}
+

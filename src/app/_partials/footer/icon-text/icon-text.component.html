@@ -1,0 +1,8 @@
+<div class="text d-flex align-items-center {{class}}">
+    <app-svg class="d-flex align-items-center justify-content-center" [svgId]="svgId"></app-svg>
+    <div class="d-flex flex-column" >
+        <div class="text-white" *ngFor="let text of texts, let i = index">
+            {{text}}
+        </div>
+    </div>
+</div>
