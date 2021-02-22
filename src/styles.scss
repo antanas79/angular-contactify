@@ -101,9 +101,15 @@ input, select {
     vertical-align:middle;
 }
 
-*:focus, *:active {
-    outline: 0 none!important;
+*:focus, *:active, *:hover, *:visited, input:focus {
+    outline: none!important;
 }
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 
 svg {
     width: 30px;

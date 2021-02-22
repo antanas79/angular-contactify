@@ -6,9 +6,11 @@
 
 .card-table {
     padding-bottom: 43px;
+ 
     // min-height:541px;
     app-card, app-table {
         flex: 1;
+        max-height: 400px;
     }
     app-card {
         max-width: 222px;
