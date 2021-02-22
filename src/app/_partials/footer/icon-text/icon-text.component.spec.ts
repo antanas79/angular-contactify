@@ -6,12 +6,13 @@ describe('IconTextComponent', () => {
   let component: IconTextComponent;
   let fixture: ComponentFixture<IconTextComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ IconTextComponent ]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [IconTextComponent],
+      }).compileComponents();
     })
-    .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(IconTextComponent);

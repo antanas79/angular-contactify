@@ -1,10 +1,10 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { FormGroup, FormBuilder} from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-select',
   templateUrl: './select.component.html',
-  styleUrls: ['./select.component.scss']
+  styleUrls: ['./select.component.scss'],
 })
 export class SelectComponent implements OnInit {
   @Input() placeholder: string;
@@ -12,9 +12,7 @@ export class SelectComponent implements OnInit {
   @Output() onSelectValueChanged = new EventEmitter<any>();
   form: FormGroup;
   loaded = false;
-  constructor(
-    private formBuilder: FormBuilder,
-  ) { }
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -25,9 +23,8 @@ export class SelectComponent implements OnInit {
   }
 
   onChanges(): void {
-    this.form.valueChanges.subscribe(val => {
-      this.onSelectValueChanged.emit(val.selectValue)
+    this.form.valueChanges.subscribe((val) => {
+      this.onSelectValueChanged.emit(val.selectValue);
     });
-}
-
+  }
 }

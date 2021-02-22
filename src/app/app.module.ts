@@ -22,7 +22,6 @@ import { AnchorTagComponent } from './_elements/anchor-tag/anchor-tag.component'
 import { IconTextComponent } from './_partials/footer/icon-text/icon-text.component';
 import { ContactsService } from '../app/_services/contacts.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,13 +33,13 @@ import { ContactsService } from '../app/_services/contacts.service';
     SelectComponent,
     SearchInputComponent,
     CheckboxComponent,
-    ButtonComponent, 
+    ButtonComponent,
     LinksComponent,
-    DropdownComponent, 
-    SvgComponent, 
+    DropdownComponent,
+    SvgComponent,
     FilterComponent,
     AnchorTagComponent,
-    IconTextComponent
+    IconTextComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,11 +48,8 @@ import { ContactsService } from '../app/_services/contacts.service';
     FormsModule,
     ReactiveFormsModule,
     NgbDropdownModule,
-
   ],
-  providers: [
-    ContactsService
-  ],
-  bootstrap: [AppComponent]
+  providers: [ContactsService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

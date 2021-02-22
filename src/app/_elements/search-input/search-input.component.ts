@@ -1,21 +1,19 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormBuilder} from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-search-input',
   templateUrl: './search-input.component.html',
-  styleUrls: ['./search-input.component.scss']
+  styleUrls: ['./search-input.component.scss'],
 })
 export class SearchInputComponent implements OnInit {
   @Input() placeholder: string;
   @Input() hasSearchIcon: boolean;
   @Output() onSearchValueChanged = new EventEmitter<any>();
 
-  loaded= false;
+  loaded = false;
   form: FormGroup;
-  constructor(
-     private formBuilder: FormBuilder,
-  ) { }
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -25,14 +23,11 @@ export class SearchInputComponent implements OnInit {
     this.loaded = true;
   }
 
-  search() {
+  search() {}
 
-  }
-  
   onChanges(): void {
-    this.form.valueChanges.subscribe(val => {
+    this.form.valueChanges.subscribe((val) => {
       this.onSearchValueChanged.emit(val.searchValue);
     });
-}
-
+  }
 }

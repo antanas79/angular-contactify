@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
   @Input() rows: any[];
@@ -12,17 +12,17 @@ export class TableComponent implements OnInit {
   @Output() onTableSelectedRowChange = new EventEmitter<any>();
   selected = 0;
   showSort = {} as any;
-  descending= {} as any;
-  constructor() { }
+  descending = {} as any;
+  constructor() {}
 
   ngOnInit(): void {
-    for (let i = 0; i < this.columnNames.length; i++ ) {
+    for (let i = 0; i < this.columnNames.length; i++) {
       this.showSort[this.columnNames[i]] = false;
       this.descending[this.columnNames[i]] = false;
     }
     this.sort(this.columnNames[0]);
   }
-  
+
   select(i) {
     this.selected = i;
     this.onTableSelectedRowChange.emit(this.selected);
@@ -33,11 +33,15 @@ export class TableComponent implements OnInit {
       return;
     }
 
-    this.descending[sortValue] ? this.rows.sort((a, b) => a[sortValue].localeCompare(b[sortValue], undefined, { numeric: true })) :
-        this.rows.sort((a, b) => b[sortValue].localeCompare(a[sortValue], undefined, { numeric: true }));
-    
-  
-    for (let i = 0; i < this.columnNames.length; i++ ) {
+    this.descending[sortValue]
+      ? this.rows.sort((a, b) =>
+          a[sortValue].localeCompare(b[sortValue], undefined, { numeric: true })
+        )
+      : this.rows.sort((a, b) =>
+          b[sortValue].localeCompare(a[sortValue], undefined, { numeric: true })
+        );
+
+    for (let i = 0; i < this.columnNames.length; i++) {
       this.showSort[this.columnNames[i]] = false;
     }
 

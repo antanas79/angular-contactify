@@ -1,23 +1,26 @@
-
 .contacts-container {
-    background: rgb(31,127,121);
-    background: linear-gradient(90deg, rgba(31,127,121,1) 0%, rgba(29,61,104,1) 100%);
+  background: rgb(31, 127, 121);
+  background: linear-gradient(
+    90deg,
+    rgba(31, 127, 121, 1) 0%,
+    rgba(29, 61, 104, 1) 100%
+  );
 }
 
 .card-table {
-    padding-bottom: 43px;
- 
-    // min-height:541px;
-    app-card, app-table {
-        flex: 1;
-        max-height: 400px;
-    }
-    app-card {
-        max-width: 222px;
-        margin-right: 16px;
-    }
-    app-table {
-        width: calc(100% - 222px - 16px);
-    }
+  padding-bottom: 43px;
 
+  // min-height:541px;
+  app-card,
+  app-table {
+    flex: 1;
+    max-height: 400px;
+  }
+  app-card {
+    max-width: 222px;
+    margin-right: 16px;
+  }
+  app-table {
+    width: calc(100% - 222px - 16px);
+  }
 }

@@ -1,66 +1,60 @@
 .dropdown {
-    background-color: rgb(13, 160, 183);
-    width: 185px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  background-color: rgb(13, 160, 183);
+  width: 185px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 35px;
+
+  svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .dropdown-toggle {
     height: 35px;
+  }
 
-    svg {
-        width: 11px;
-        height: 11px;
+  &.show {
+    .arrow-up {
+      position: absolute;
+      top: 40px;
+      right: 20px;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid #0da0b7;
+      z-index: 100000;
     }
+  }
 
-    .dropdown-toggle {
-        height: 35px;
+  span.username {
+    color: white;
+  }
+  .dropdown-toggle::after {
+    color: white;
+  }
+
+  .dropdown-menu-right {
+    margin-top: 15px;
+    background-color: rgb(13, 160, 183);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0px;
+    overflow: hidden;
+    border: 2px solid rgb(8, 129, 152);
+
+    .dropdown-item {
+      color: white;
+      height: 39px;
     }
-
-    &.show {
-        .arrow-up {
-            position: absolute;
-            top: 40px;
-            right: 20px;
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-bottom: 15px solid #0da0b7;
-            z-index: 100000;
-        }
+    .dropdown-item:not(:last-child) {
+      border-bottom: 1px solid rgb(8, 146, 171);
     }
-
-    
-
-    span.username {
-        color: white;
+    .dropdown-item:hover {
+      opacity: 0.7;
+      background-color: rgb(13, 160, 183);
     }
-    .dropdown-toggle::after {
-        color: white;
-
-    }
-
-    .dropdown-menu-right {
-        margin-top: 15px;
-        background-color: rgb(13, 160, 183);
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 0px;
-        overflow: hidden;
-        border: 2px solid rgb(8,129,152);
-
-      
-
-        .dropdown-item {
-            color: white;
-            height: 39px;   
-        }
-        .dropdown-item:not(:last-child) {
-            border-bottom: 1px solid rgb(8,146,171);
-        }
-        .dropdown-item:hover {
-            opacity: 0.7;
-            background-color: rgb(13, 160, 183);
-        }
-    }
+  }
 }
-

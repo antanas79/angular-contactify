@@ -1,98 +1,100 @@
-
-
 .table-container {
-    height: 100%;
-    table {
-        cursor: pointer;
-        .width-40px {
-            width: 40px;
-        }
-        width: 100%;
-        // min-height: 401px;
-        background: white;
-        border-radius: 15px;
-        thead {
-            cursor: pointer;
-            overflow: hidden;
-            background: rgb(20,191,219);
-            background: linear-gradient(90deg, rgba(20,191,219,1) 0%, rgba(2,134,162,1) 100%);
-            th:first-child{
-                border-top-left-radius:15px;
-                width: 48px;
-            }
-            th:nth-child(3) {
-                padding-left: 19px;
-            }
-
-            th:nth-child(4), th:nth-child(5) {
-                padding-left: 14px;
-            }
-            th:nth-child(6){
-                padding-right: 16px;
-                text-align:right;
-            }
-              
-            th:last-child{
-                border-top-right-radius:15px;
-            }
-
-            tr th{
-                padding-top: 17px;
-                padding-bottom: 15px;
-                color: white;
-            }
-        }
-        tbody {
-            tr td {
-                line-height: 42px;
-                padding-bottom: 0;
-            }
-            tr{
-                border-bottom: 1px solid rgb(235,236,234);
-
-                .svg-container {
-                    width: 25px;
-                    height: 25px;
-                }
-       
-                &.selected {
-                    td {
-                        background: rgb(241,246, 249);
-                    }
-                    .svg-container {
-                        background-color: rgb(13, 160, 183);
-                        border-radius: 5px;
-                    }
-                }
-            }
-
-            tr:last-child td:first-child{
-                border-bottom-left-radius:15px;
-            }
-            tr:last-child td:last-child{
-                border-bottom-right-radius:15px;
-            }
-
-            tr:last-child {
-                border-bottom: none;
-            }
-
-            td:first-child{
-                width: 48px;
-            }
-            td:nth-child(3) {
-                padding-left: 19px;
-            }
-
-            td:nth-child(4), td:nth-child(5) {
-                padding-left: 14px;
-            }
-            td:nth-child(6){
-                padding-right: 16px;
-                text-align:right;
-            }
-        }
-
-
+  height: 100%;
+  table {
+    cursor: pointer;
+    .width-40px {
+      width: 40px;
     }
+    width: 100%;
+    // min-height: 401px;
+    background: white;
+    border-radius: 15px;
+    thead {
+      cursor: pointer;
+      overflow: hidden;
+      background: rgb(20, 191, 219);
+      background: linear-gradient(
+        90deg,
+        rgba(20, 191, 219, 1) 0%,
+        rgba(2, 134, 162, 1) 100%
+      );
+      th:first-child {
+        border-top-left-radius: 15px;
+        width: 48px;
+      }
+      th:nth-child(3) {
+        padding-left: 19px;
+      }
+
+      th:nth-child(4),
+      th:nth-child(5) {
+        padding-left: 14px;
+      }
+      th:nth-child(6) {
+        padding-right: 16px;
+        text-align: right;
+      }
+
+      th:last-child {
+        border-top-right-radius: 15px;
+      }
+
+      tr th {
+        padding-top: 17px;
+        padding-bottom: 15px;
+        color: white;
+      }
+    }
+    tbody {
+      tr td {
+        line-height: 42px;
+        padding-bottom: 0;
+      }
+      tr {
+        border-bottom: 1px solid rgb(235, 236, 234);
+
+        .svg-container {
+          width: 25px;
+          height: 25px;
+        }
+
+        &.selected {
+          td {
+            background: rgb(241, 246, 249);
+          }
+          .svg-container {
+            background-color: rgb(13, 160, 183);
+            border-radius: 5px;
+          }
+        }
+      }
+
+      tr:last-child td:first-child {
+        border-bottom-left-radius: 15px;
+      }
+      tr:last-child td:last-child {
+        border-bottom-right-radius: 15px;
+      }
+
+      tr:last-child {
+        border-bottom: none;
+      }
+
+      td:first-child {
+        width: 48px;
+      }
+      td:nth-child(3) {
+        padding-left: 19px;
+      }
+
+      td:nth-child(4),
+      td:nth-child(5) {
+        padding-left: 14px;
+      }
+      td:nth-child(6) {
+        padding-right: 16px;
+        text-align: right;
+      }
+    }
+  }
 }

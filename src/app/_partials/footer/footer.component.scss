@@ -1,37 +1,45 @@
-
-
 .footer {
-    min-height: 146px;
-    //1
-    .first {
-        padding-left: 15px;
-        width: 41%;
-        background: rgb(25,85,93);
-        background: linear-gradient(90deg, rgba(25,85,93,1) 0%, rgba(25,85,93,1) 100%);
-    }
+  min-height: 146px;
+  //1
+  .first {
+    padding-left: 15px;
+    width: 41%;
+    background: rgb(25, 85, 93);
+    background: linear-gradient(
+      90deg,
+      rgba(25, 85, 93, 1) 0%,
+      rgba(25, 85, 93, 1) 100%
+    );
+  }
 
-    //2
-    .second {
-        width: 36%;
-        background: rgb(19,38,68);
-        background: linear-gradient(90deg, rgba(19,38,68,1) 0%, rgba(19,38,68,1) 100%);
-        div {
-            height: 50%;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+  //2
+  .second {
+    width: 36%;
+    background: rgb(19, 38, 68);
+    background: linear-gradient(
+      90deg,
+      rgba(19, 38, 68, 1) 0%,
+      rgba(19, 38, 68, 1) 100%
+    );
+    div {
+      height: 50%;
+      padding-left: 20px;
+      padding-right: 20px;
     }
-  
-    //3
-    .third {
-        padding-right: 15px;
-        width: 23%;
-        background: rgb(24,48,83);
-        background: linear-gradient(90deg, rgba(24,48,83,1) 0%, rgba(24,48,83,1) 100%);
-        div {
-            padding-left: 26px;
-        }
-    }
+  }
 
-  
+  //3
+  .third {
+    padding-right: 15px;
+    width: 23%;
+    background: rgb(24, 48, 83);
+    background: linear-gradient(
+      90deg,
+      rgba(24, 48, 83, 1) 0%,
+      rgba(24, 48, 83, 1) 100%
+    );
+    div {
+      padding-left: 26px;
+    }
+  }
 }
