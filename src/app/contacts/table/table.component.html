@@ -5,7 +5,7 @@
                 <th></th>
                 <th class="text-capitalize" *ngFor="let columnName of columnNames; let i = index" (click)="sort(columnName)">
                   {{columnName}}
-                  <app-svg class="arrow" *ngIf="showSort[columnName]" [svgId]="!descending[columnName] ? 'arrow-up-solid': 'arrow-down-solid'"></app-svg>
+                  <app-svg class="arrow" *ngIf="showSort[columnName] && columnName !== 'phone'" [svgId]="!descending[columnName] ? 'arrow-up-solid': 'arrow-down-solid'"></app-svg>
                 </th>
                 <th class="width-40px" *ngFor="let action of actions, let z = index"></th>
             </tr>
