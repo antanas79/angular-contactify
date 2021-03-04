@@ -5,11 +5,13 @@ button {
   height: 35px;
 
   &.add-new-contract {
-    app-svg {
+    background: rgb(32, 127, 122);
+    div {
       width: 25px;
       height: 25px;
+      background: rgb(25, 122, 99);
+      border-radius: 50%;
     }
-    background: rgb(32, 127, 122);
   }
 
   &.filter {

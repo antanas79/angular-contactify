@@ -19,8 +19,8 @@ export class FilterComponent implements OnInit {
     this.uniqueItems = [...new Set(this.list)];
     this.form = this.formBuilder.group({
       searchValue: [''],
-      selectedPropertyValue: [''],
-      showActive: [true],
+      selectValue: [''],
+      checkboxValue: [true],
     });
   }
 

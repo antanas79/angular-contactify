@@ -1,18 +1,16 @@
 svg {
   &.logo-icon,
   &.dropdown,
-  &.copyright {
+  &.copyright,
+  &.add-new-contract {
     width: 12px;
     height: 12px;
   }
   &.action,
   &.eye,
-  &.arrow {
+  &.arrow,
+  &.search-icon {
     width: 15px;
     height: 15px;
-  }
-  &.add-new-contract {
-    width: 25px;
-    height: 25px;
   }
 }

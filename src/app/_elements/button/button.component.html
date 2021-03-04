@@ -1,9 +1,12 @@
 <button class="text-uppercase" class={{class}}>
-    <app-svg 
-    *ngIf="svgId" 
-    class="{{class}}"
-    [svgId]="svgId">
-    </app-svg>
+    <div class="justify-content-center {{class}}">
+        <app-svg 
+        *ngIf="svgId" 
+        class={{class}}
+        [svgId]="svgId">
+        </app-svg>
+    </div>
+  
     <span 
     [ngClass]="{'ml-2': svgId}">
         {{buttonText}}</span>

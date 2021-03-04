@@ -1,0 +1,13 @@
+.content-container {
+  width: 100%;
+  background: rgb(31, 127, 121);
+  background: linear-gradient(
+    90deg,
+    rgba(31, 127, 121, 1) 0%,
+    rgba(29, 61, 104, 1) 100%
+  );
+  .content {
+    width: 100%;
+    max-width: 1400px;
+  }
+}

@@ -20,7 +20,7 @@ export class TableComponent implements OnInit {
       this.showSort[this.columnNames[i]] = false;
       this.descending[this.columnNames[i]] = false;
     }
-    this.sort(this.columnNames[0]);
+    // this.sort(this.columnNames[0]);
   }
 
   select(i) {

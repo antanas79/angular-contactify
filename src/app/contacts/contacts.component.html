@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <app-filter [list]="contacts"  (onFilterSubmit)="updateValues($event, 'filter')" [selectProperty]="'city'"></app-filter>
         <div class="d-flex justify-content-between card-table">
-            <app-card [propNames]="keys" [propValues]="contacts[selected]"></app-card>
-            <app-table (onTableSelectedRowChange)="updateValues($event, 'table')" [columnNames]="keys" [rows]="contacts" [actions]="['pen-solid', 'trash-alt-solid']"></app-table>
+            <app-card [propNames]="keys" [propValues]="filteredContacts[selected]"></app-card>
+            <app-table (onTableSelectedRowChange)="updateValues($event, 'table')" [columnNames]="keys" [rows]="filteredContacts" [actions]="['pen-solid', 'trash-alt-solid']"></app-table>
         </div>
     </div>
 </div>

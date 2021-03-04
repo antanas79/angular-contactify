@@ -5,9 +5,9 @@
                 <div class="mr-3">
                     <app-search-input (onSearchValueChanged)="updateFormValues($event, 'searchValue')" [placeholder]="'Name'" [hasSearchIcon]="false"></app-search-input>
                 </div>
-                <app-select (onSelectValueChanged)="updateFormValues($event, 'selectedPropertyValue')" [placeholder]="'City'" [options]="uniqueItems"></app-select>
+                <app-select (onSelectValueChanged)="updateFormValues($event, 'selectValue')" [placeholder]="'City'" [options]="uniqueItems"></app-select>
                 <div class="mx-3 pl-2 pr-1 d-flex align-items-center">
-                    <app-checkbox (onCheckboxValueChanged)="updateFormValues($event, 'showActive')" [checkboxValue]="true" [checkboxName]="'showActive'" [checkboxId]="'checkboxId'" [checkboxLabelText]="'Show Active'"></app-checkbox>
+                    <app-checkbox (onCheckboxValueChanged)="updateFormValues($event, 'checkboxValue')" [checkboxValue]="true" [checkboxName]="'showActive'" [checkboxId]="'checkboxId'" [checkboxLabelText]="'Show Active'"></app-checkbox>
                 </div>
                 <div class="mx-3 pl-2 pr-1" (click)="save()">
                     <app-button class="filter" [buttonText]="'Filter'"></app-button>
@@ -17,7 +17,7 @@
         </form>
 
         <div>
-            <app-button class="add-new-contract" [buttonText]="'Add New Contract'" [svgId]="'plus-circle-solid'"></app-button>
+            <app-button class="add-new-contract d-flex align-items-center" [buttonText]="'Add New Contract'" [svgId]="'plus-solid'"></app-button>
         </div>
     </div>
 </div>

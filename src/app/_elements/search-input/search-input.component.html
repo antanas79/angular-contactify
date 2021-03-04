@@ -1,6 +1,13 @@
-<form [formGroup]="form" (ngSubmit)="search()" novalidate>
-    <div >
-        <input type="text" placeholder="{{placeholder}}" name="searchValue" id="searchValue" formControlName="searchValue">
+<form [formGroup]="form" class="position-relative" (ngSubmit)="search()" novalidate>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="{{placeholder}}" name="searchValue" id="searchValue" formControlName="searchValue">
+        <div class="input-group-append" *ngIf="hasSearchIcon">
+            <button class="btn btn-secondary d-flex align-items-center justify-content-center p-0" type="button">
+              <app-svg [svgId]="'search-solid'" class="search-icon d-flex align-items-center"></app-svg>
+                </button>
+            </div>
     </div>
+    
+
 </form>
 

@@ -8,6 +8,7 @@ import { ContactsService } from '../_services/contacts.service';
 })
 export class ContactsComponent implements OnInit {
   contacts: any;
+  filteredContacts: any;
   keys = [];
   actions = [];
   isLoaded = false;
@@ -16,6 +17,7 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit(): void {
     this.contacts = this.contactsService.getContacts();
+    this.filteredContacts = this.contacts;
     this.keys = ['name', 'surname', 'city', 'email', 'phone'];
     this.actions = ['edit', 'delete'];
     this.isLoaded = true;
@@ -27,36 +29,18 @@ export class ContactsComponent implements OnInit {
     } else {
       this.selected = 0;
 
-      if (value.selectedPropertyValue?.length > 0) {
-        this.contacts = this.contactsService
-          .getContacts()
-          .filter(
-            (c) =>
-              c.active == value.showActive &&
-              c.city == value.selectedPropertyValue &&
-              c.name
-                .toLowerCase()
-                .includes(
-                  value.searchValue
-                    ? value.searchValue.toLowerCase()
-                    : value.searchValue
-                )
-          );
-      } else {
-        this.contacts = this.contactsService
-          .getContacts()
-          .filter(
-            (c) =>
-              c.active == value.showActive &&
-              c.name
-                .toLowerCase()
-                .includes(
-                  value.searchValue
-                    ? value.searchValue.toLowerCase()
-                    : value.searchValue
-                )
-          );
-      }
+      let searchValue = value.searchValue?.length > 0;
+      let selectValue = value.selectValue?.length > 0;
+      let checkboxValue = value.checkboxValue;
+
+      this.filteredContacts = this.contacts
+        .filter((c) => (checkboxValue ? c.active : true))
+        .filter((c) => (selectValue ? c.city === value.selectValue : true))
+        .filter((c) =>
+          searchValue
+            ? c.name.toLowerCase().includes(value.searchValue.toLowerCase())
+            : true
+        );
     }
   }
 }
